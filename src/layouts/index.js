@@ -22,51 +22,52 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{margin: 0, textAlign: 'center',fontSize: '18px'}}>
-        <Link to="/"
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
+      <h1 style={{ margin: 0, textAlign: 'center', fontSize: '18px' }}>
+        <Link
+          to="/"
+          style={{
+            color: 'black',
+            textDecoration: 'none',
+          }}
         >
           CodeStack
         </Link>
       </h1>
     </div>
   </div>
-);
+)
 
-const Sidebar = (props) => (
+const Sidebar = props => (
   <div
     style={{
       border: '2px solid #e6e6e6',
       maxWidth: 960,
       padding: '0.5rem',
-      marginBottom: '25px'
+      marginBottom: '25px',
     }}
   >
     <strong>{props.title}.</strong> {props.description}
   </div>
-);
+)
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
       meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
       ]}
     />
     <Header />
     <div
       style={{
-        margin: "0 auto",
+        margin: '0 auto',
         maxWidth: 980,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        height: "100%"
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: '100%',
       }}
     >
       <Media query={{ maxWidth: 848 }}>
@@ -74,13 +75,13 @@ const TemplateWrapper = ({ children }) => (
           matches ? (
             <div
               style={{
-                margin: "0 auto",
+                margin: '0 auto',
                 maxWidth: 980,
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                height: "100%",
-                padding: "25px"
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                height: '100%',
+                padding: '25px',
               }}
             >
               <div style={{ flex: 1 }}>{children()}</div>
@@ -88,16 +89,16 @@ const TemplateWrapper = ({ children }) => (
           ) : (
             <div
               style={{
-                margin: "0 auto",
+                margin: '0 auto',
                 maxWidth: 980,
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                height: "100%",
-                padding: "25px"
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                height: '100%',
+                padding: '25px',
               }}
             >
-              <div style={{ flex: 2.5, paddingRight: "30px" }}>
+              <div style={{ flex: 2.5, paddingRight: '30px' }}>
                 {children()}
               </div>
               <div style={{ flex: 1 }}>
@@ -116,7 +117,7 @@ const TemplateWrapper = ({ children }) => (
       </Media>
     </div>
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
